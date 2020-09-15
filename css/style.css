@@ -1,0 +1,173 @@
+/*Variables*/
+:root {
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --basic-lightblack: #333333;
+  --basic-blue: #81B3D2;
+  --basic-gray: #EEEEEE;
+  --basic-brown: #766357;
+  --basic-whitefooter: rgba(255, 255, 255, 0.9);
+
+  --hover-blue: #669EC0;
+  --active-blue: #5496BD;
+
+  --special-form: #F2F2F2;
+
+  --hover-brown:  #604E43;
+  --active-brown: #503E33;
+}
+/* Global */
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: PT Sans, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  background-image: url();
+  background-position: center;
+  background-repeat:no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+li {
+  list-style: none;
+}
+/*Main-main_navigation */
+
+ .site_navigation {
+   font-weight: bold;
+   background-color: transparent;
+}
+
+.nav_link {
+color: var(--basic-black);
+}
+
+/*Welcome*/
+.welcome {
+  background-position: center;
+  background-image: url("img/photo.jpg");
+}
+
+/*Reason*/
+
+.reason h2 {
+font-weight: bold;
+font-size: 21px;
+color: var(--basic-black);
+text-align: center;
+}
+.reason p {
+color: var(--basic-lightblack);
+text-align: center;
+}
+
+/*Features*/
+.features_item_block1 {
+  background-color: var(--basic-blue);
+}
+
+.features_item_block1 h3 {
+font-weight: bold;
+font-size: 21px;
+line-height: 21px;
+}
+
+.features_item_block2 {
+  background-color: var(--basic-white);
+}
+.features_item_block2 h3 {
+font-weight: bold;
+font-size: 21px;
+color: var(--basic-black);
+}
+
+.features_item_block2 p {
+color: var(--basic-lightblack);
+}
+
+.features_item_block3 {
+background-color: var(--basic-gray);
+}
+.features_item_block3 h3 {
+font-weight: bold;
+font-size: 21px;
+color: var(--basic-black);
+}
+
+.features_item_block3 p {
+color: var(--basic-lightblack);
+}
+
+/*Interest*/
+
+.button_interest {
+font-weight: bold;
+font-size: 30px;
+line-height: 24px;
+color: var(--basic-lightblack);
+
+}
+
+
+/*Footer*/
+
+.main_footer {
+  background-color: var(--basic-whitefooter);
+}
+.button_visit, .telephone, .button_copyright {
+    color: var(--basic-black);
+    font-weight: bold;
+}
+.social_list a {
+  background-color: var(--basic-blue);
+}
+.social_button:hover {
+  background-color: var(--hover-blue);
+}
+.social_button:active {
+  background-color: var(--active-blue);
+}
+
+/*Modal*/
+
+.hotel {
+font-weight: bold;
+font-size: 21px;
+color: var(--basic-white);
+background-color: var(--basic-brown);
+}
+
+.button_search {
+font-weight: bold;
+font-size: 21px;
+color: var(--basic-white);
+background-color: var(--basic-blue);
+}
+
+.hotel:hover {
+  background-color: var(--hover-brown);
+}
+
+.hotel:active {
+  background-color: var(--active-brown);
+}
+.button_search:hover {
+  background-color: var(--hover-blue);
+}
+
+.button_search:active {
+  background-color: var(--active-blue);
+}
