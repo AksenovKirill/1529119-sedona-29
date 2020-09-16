@@ -65,10 +65,12 @@ color: var(--basic-blue);
 
 .nav-link:active {
   opacity: 0.3;
-}
+
+
 /*как сделать цвет для активной страницы?*/
 
 }
+
 /*Welcome*/
 
 .welcome {
@@ -237,21 +239,21 @@ button[type="button"] {
 
 /*Arrows*/
 
-.button-up {
+.up-arrows {
  background-color: var(--special-gray2);
 }
 
-.button-down {
+.down-arrows {
  background-color: var(--basic-blue);
 }
 
-.button-up:hover,
-.button-down:hover {
+.up-arrows:hover,
+.down-arrows:hover {
  background-color: var(--basic-black);
 }
 
-.button-up:active,
-.button-down:active {
+.up-arrows:active,
+.down-arrows:active {
  background-color: var(--basic-blue);
 }
 
