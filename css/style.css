@@ -18,6 +18,8 @@
 
   --hover-brown:  #604E43;
   --active-brown: #503E33;
+
+  --active-logotip: #BDBBBC;
 }
 /* Global */
 body {
@@ -38,16 +40,20 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--basic-black);
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 /*Main-main_navigation */
 
 .site-navigation {
@@ -65,11 +71,8 @@ color: var(--basic-blue);
 
 .nav-link:active {
   opacity: 0.3;
-
-
-/*как сделать цвет для активной страницы?*/
-
 }
+/*как сделать цвет для активной страницы?*/
 
 /*Welcome*/
 
@@ -78,6 +81,7 @@ color: var(--basic-blue);
  height: 509px;
  left: 40px;
  top: 55px;
+ border-color: var(--basic-white);
  background-image: url("../img/photo.jpg");
 }
 
@@ -140,10 +144,8 @@ margin-right: auto;
   background-color: var(--basic-whitefooter);
 }
 
-.button-visit,
 .telephone,
-.button-copyright {
- color: var(--basic-black);
+.button-visit {
  font-weight: bold;
 }
 
@@ -309,4 +311,7 @@ button[type="button"] {
   line-height: 21px;
   background-color: var(--special-gray);
   color: var(--special-gray3);
+}
+.star {
+  color: var(--basic-blue);
 }
