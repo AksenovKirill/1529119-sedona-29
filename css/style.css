@@ -47,10 +47,29 @@ img {
   height: auto;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Стили для ul */
+
+.site-navigation,
+.features-list-block1,
+.features-list-block2,
+.features-list-block3,
+.contact-list,
+.social-list,
+.list-hotel {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+/*Стили для li*/
+
+.reason-h2,
+.button-visit,
+.telephone,
+.catalog-h3 {
+  color: var(--basic-black);
+  font-weight: bold;
+  font-size: 21px;
 }
 
 /*Main-main_navigation */
@@ -87,22 +106,19 @@ ul {
 
 /*Reason*/
 
-.reason-h2 {
- font-weight: bold;
- font-size: 21px;
+.reason {
  text-align: center;
 }
 
 .reason-p {
  color: var(--basic-lightblack);
- text-align: center;
 }
 
 /*Features*/
 
 .features-item-block1 {
-  background-color: var(--basic-blue);
-  color: var(--basic-white);
+ background-color: var(--basic-blue);
+ color: var(--basic-white);
 }
 
 .features-h3 {
@@ -135,8 +151,9 @@ ul {
   background-color: var(--basic-whitefooter);
 }
 
-.social-list a {
+.style-social {
   background-color: var(--basic-blue);
+  background-size: 100%;
 }
 
 .social-button:hover {
@@ -191,24 +208,9 @@ ul {
  background-image: url("../img/catalog.jpg");
 }
 
-/*Стили для всех классов в списках*/
-
-.button-visit,
-.telephone,
-.catalog-h3 {
-  text-decoration: none;
-  color: var(--basic-black);
-  font-weight: bold;
-  font-size: 21px;
-}
-
 /*Found*/
-.sorting {
- font-size: 12px;
- line-height: 18px;
-}
 
-button[type="button"] {
+.sorting {
  font-size: 12px;
  line-height: 18px;
 }
