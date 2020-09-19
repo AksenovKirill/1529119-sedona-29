@@ -40,7 +40,6 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--basic-black);
 }
 
 img {
@@ -56,21 +55,17 @@ ul {
 
 /*Main-main_navigation */
 
-.site-navigation {
-  font-weight: bold;
-  background-color: transparent;
-}
-
 .nav-link {
-  color: var(--basic-black);
+ font-weight: bold;
+ color: var(--basic-black);
 }
 
 .nav-link:hover {
-color: var(--basic-blue);
+ color: var(--basic-blue);
 }
 
 .nav-link:active {
-  opacity: 0.3;
+ opacity: 0.3;
 }
 /*как сделать цвет для активной страницы?*/
 
@@ -81,14 +76,13 @@ color: var(--basic-blue);
  height: 509px;
  left: 40px;
  top: 55px;
- border-color: var(--basic-white);
  background-image: url("../img/photo.jpg");
 }
 
 .img-welcome {
-display: block;
-margin-left: auto;
-margin-right: auto;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 /*Reason*/
@@ -96,7 +90,6 @@ margin-right: auto;
 .reason-h2 {
  font-weight: bold;
  font-size: 21px;
- color: var(--basic-black);
  text-align: center;
 }
 
@@ -121,12 +114,10 @@ margin-right: auto;
 
 .features-block2 {
   background-color: var(--basic-white);
-  color: var(--basic-black);
 }
 
 .features-item-block3 {
  background-color: var(--basic-gray);
- color: var(--basic-black);
 }
 
 /*Interest*/
@@ -142,11 +133,6 @@ margin-right: auto;
 
 .main-footer {
   background-color: var(--basic-whitefooter);
-}
-
-.telephone,
-.button-visit {
- font-weight: bold;
 }
 
 .social-list a {
@@ -195,13 +181,6 @@ margin-right: auto;
 
 /*Catalog*/
 
-/*h3 in Catalog*/
-
-.catalog-h3 {
- font-weight: bold;
- font-size: 21px;
-}
-
 /*Filter*/
 
 .filter {
@@ -210,6 +189,17 @@ margin-right: auto;
  left: 40px;
  top: 56px;
  background-image: url("../img/catalog.jpg");
+}
+
+/*Стили для всех классов в списках*/
+
+.button-visit,
+.telephone,
+.catalog-h3 {
+  text-decoration: none;
+  color: var(--basic-black);
+  font-weight: bold;
+  font-size: 21px;
 }
 
 /*Found*/
@@ -229,13 +219,13 @@ button[type="button"] {
 
 .button2,
 .button3 {
- border: 1px dashed #81B3D2;
+ border: 1px dashed var(--basic-blue);
  opacity: 0.3;
  }
 
 .button2:hover,
 .button3:hover {
-  color: var(--basic-blue);
+ color: var(--basic-blue);
 }
 
 .button1:active,
