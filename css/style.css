@@ -297,16 +297,27 @@ img {
 .filter {
   width: 1200px;
   height: 217px;
-  left: 40px;
-  top: 56px;
   background-image: url("../img/catalog.jpg");
 }
 
 /*Found*/
+.found {
+  display: grid;
+  grid-template-columns: 117px 75px 49px 49px 76px 10px 10px;
+  gap: 30px;
+  margin-top: 30px;
+}
 
 .sorting {
   font-size: 12px;
   line-height: 18px;
+}
+
+.item-hotel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 110px;
+  margin-bottom: 54px;
 }
 
 .button1 {

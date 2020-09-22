@@ -8,24 +8,28 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
-</head>
-
-<body class="page-body">
-
   <header class="main-header">
 
-  <div class="logo">
-    <img src="img/logo-index.png" width="138" height="70" alt="Логотип">
-  </div>
-
-  <nav class="main-navigation">
-
-      <ul class="site-navigation">
-        <li><a class="nav-link" href="index.html">Информация</a></li>
-        <li><a class="nav-link" href="#">Фото и видео</a></li>
-        <li><a class="nav-link" href="#">Карта штата</a></li>
-        <li><a class="nav-link" href="#">Гостиницы</a></li>
-      </ul>
+    <a class="logo-div">
+      <img src="img/logo-index.png" width="138" height="70" alt="Логотип" />
+    </a>
+    <nav class="main-navigation">
+      <div class="grid-navigation">
+        <ul class="site-navigation">
+          <li class="style-nav style-nav1">
+            <a class="nav-link" href="index.html">Информация</a>
+          </li>
+          <li class="style-nav style-nav2">
+            <a class="nav-link" href="#">Фото и видео</a>
+          </li>
+          <li class="style-nav style-nav3">
+            <a class="nav-link" href="#">Карта штата</a>
+          </li>
+          <li class="style-nav style-nav4">
+            <a class="nav-link" href="#">Гостиницы</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -38,20 +42,17 @@
     </section>
 
     <section class="found">
-      <h3 class="catalog-h3">Найдено: 3</h3>
+      <h3 class="catalog-h3">Найдено:3</h3>
       <p class="sorting">Сортировка:</p>
       <button class="button1" type="button">По цене</button>
       <button class="button2" type="button">По типу</button>
       <button class="button3" type="button">По рейтингу</button>
-</section>
-
-<section class="arrows">
-<div class="up">
-  <button class="up-arrows" type="button"></button>
-</div>
-<div class="down">
-  <button class="down-arrows" type="button"></button>
-</div>
+      <div class="up">
+        <button class="up-arrows" type="button"></button>
+      </div>
+      <div class="down">
+        <button class="down-arrows" type="button"></button>
+      </div>
 </section>
 
     <section class="list">
@@ -59,42 +60,49 @@
     <ul class="list-hotel">
       <li class="item-hotel">
         <img src="img/hotel.jpg" width="135" height="90" alt="Гостиница">
+        <div>
         <h3 class="catalog-h3 hotel-h3">Amara Resort & Spa</h3>
-        <p>Забронировать от 4000</p>
-        <a class="rating" href="#">Рейтинг: 8,5</a><br>
+        <p>Гостиница от 4000</p>
         <a class="detail" href="#">Подробнее</a>
         <a class="booking" href="#">Забронировать</a>
+      </div>
         <div>
           <a class="star" href="">*</a>
           <a class="star" href="">*</a>
           <a class="star" href="">*</a>
           <a class="star" href="">*</a>
-          <a class="star" href="">*</a>
+          <a class="star" href="">*</a><br>
+          <a class="rating" href="#">Рейтинг: 8,5</a><br>
         </div>
       </li>
-      <li>
+      <li class="item-hotel">
+        
         <img src="img/motel.jpg" width="135" height="90" alt="Мотель">
+        <div>
         <h3 class="catalog-h3 hotel-h3">Desert Quail Inn</h3>
-        <p>Забронировать от 3000</p>
-        <a class="rating" href="#">Рейтинг: 8,9 </a><br>
+        <p>Мотель от 3000</p>
         <a class="detail" href="#">Подробнее</a>
         <a class="booking" href="#">Забронировать</a>
+      </div>
         <div>
           <a class="star" href="">*</a>
           <a class="star" href="">*</a>
-          <a class="star" href="">*</a>
+          <a class="star" href="">*</a><br>
+          <a class="rating" href="#">Рейтинг: 8,9 </a>
         </div>
       </li>
-      <li>
+      <li class="item-hotel">
         <img src="img/appartament.jpg" width="135" height="90" alt="Аппартаменты">
+        <div>
         <h3 class="catalog-h3 hotel-h3">Villas at Poco Diablo</h3>
-        <p>Забронировать от 2000</p>
-        <a class="rating" href="#">Рейтинг: 9,2 </a><br>
+        <p>Аппартаменты от 2000</p>
         <a class="detail" href="#">Подробнее</a>
         <a class="booking" href="#">Забронировать</a>
+      </div>
         <div>
           <a class="star" href="">*</a>
-          <a class="star" href="">*</a>
+          <a class="star" href="">*</a><br>
+          <a class="rating" href="#">Рейтинг: 9,2 </a>
         </div>
       </li>
     </ul>
@@ -103,11 +111,10 @@
   </main>
 
   <footer class="page-footer main-footer">
-
     <section class="footer-contact">
       <ul class="contact-list">
         <li class="contact-item">
-          <a class="button-visit" href="#">#visitsedona</a><br>
+          <a class="button-visit" href="#">#visitsedona</a><br />
           <a class="telephone" href="tel:+7495666-01-66">ТЕЛ: +7(495) 666-01-66</a>
         </li>
       </ul>
@@ -117,28 +124,28 @@
       <ul class="social-list">
         <li class="style-social">
           <a class="social-button" href="#">
-            <img src="img/twitter.png" width="17" height="15"  alt="twitter">
+            <img src="img/twitter.png" width="17" height="15" alt="twitter" />
           </a>
         </li>
         <li class="style-social">
           <a class="social-button" href="#">
-            <img src="img/fb-icon.png" width="12" height="22" alt="facebook">
+            <img src="img/fb-icon.png" width="12" height="22" alt="facebook" />
           </a>
         </li>
         <li class="style-social">
           <a class="social-button" href="#">
-            <img src="img/youtube.png" width="20" height="16" alt=">youtube">
+            <img src="img/youtube.png" width="20" height="16" alt="youtube" />
           </a>
         </li>
       </ul>
     </section>
 
     <section class="footer-copyright">
-    <p>Website by</p>
-  <div class="copyright">
-  <a class="button-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
-    <img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип академии"></a>
-  </div>
+      <p class="p-copy">Website by</p>
+      <div class="copyright">
+        <a class="button-copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип академии" /></a>
+      </div>
     </section>
   </footer>
 
