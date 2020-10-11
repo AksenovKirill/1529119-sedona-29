@@ -28,6 +28,11 @@
   --active-copyright: #231F20;
 
   --box-shadow: rgba(0, 1, 1, 0.2);
+  --shadow-modal:  rgba(0, 1, 1, 0.15);
+
+  --basic-form:  #F2F2F2;
+  --hover-form: #EBEBEB;
+  --focus-form: #ffffff;
 }
 /* Global */
 
@@ -141,8 +146,6 @@ img {
 .nav-link:active {
   opacity: 0.3;
 }
-
-/*как сделать цвет для активной страницы?*/
 
 .container {
   width: 1200px;
@@ -262,34 +265,61 @@ img {
 /*Interest*/
 
 .div-interest {
-  display: grid;
-  grid-template-rows: 1fr;
-  height: 291px;
-}
-
-.button-interest {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 1200px;
+  height: 205px;
   color: var(--basic-lightblack);
-  padding-top: 58px;
   text-align: center;
+  margin: 58px 0px 0px 0px;
 }
 
-.button-interest h2 {
+.div-interest h2 {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
 }
-.button-interest p {
-  font-size: 14px;
+.div-interest p {
   line-height: 24px;
-  font-weight: normal;
 }
-/*Footer*/
+
+.checkhotel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 568px;
+  height: 86px;
+  background-color: var(--basic-brown);
+  margin: 0 auto;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+}
+
+.checkhotel:hover {
+  background-color: var(--hover-brown);
+}
+.checkhotel:active {
+  background-color: var(--active-brown);
+}
+.checkhotel span:hover {
+  background-color: var(--hover-brown);
+}
+.checkhotel span:active {
+ opacity: 0.3;
+}
 
 .map {
   height: 474px;
   background-image: url("../img/map.png");
 }
 
+/*Footer*/
 .main-footer {
   width: 1200px;
   height: 120px;
@@ -356,118 +386,18 @@ img {
 .style-social:active {
   background-color: var(--active-blue);
 }
-.style-social.social-button:active {
-  background-color: var(--active-blue);
-}
+
 .svgfooter:hover {
   fill: var(--active-blue); 
 }
+
 .svgfooter:active {
   fill: var(--active-copyright);
   opacity: 0.3;
 }
 
-/*Modal*/
-
-.modal {
-  width: 568px;
-  max-height: 481px;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-}
-
-.modal-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 568px;
-  height: 86px;
-  background-color: var(--basic-brown);
-}
-
-.hotel {
-  font-weight: bold;
-  font-size: 21px;
-  color: var(--basic-white);
-}
-
-.button-search {
-  min-width: 458px;
-  min-height: 58px;  
-  background-color: var(--basic-blue);
-  font-weight: bold;
-  font-size: 21px;
-  color: var(--basic-white);
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0px 55px 55px 55px;
-}
-
-.modal-title:hover {
-  background-color: var(--hover-brown);
-}
-
-.modal-title:active {
-  background-color: var(--active-brown);
-}
-.modal-title .hotel:active {
- opacity: 0.3;
-}
-
-.button-search:hover {
-  background-color: var(--hover-blue);
-}
-
-.button-search:active {
-  background-color: var(--active-blue);
-}
-.button-search span:active {
+.svg-icon:active {
   opacity: 0.3;
-}
-/* Форма модального окна */
-
-.date-check {
-  width: 458px;
-  height: 58px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 55px 55px 29px 55px;
-  
-}
-
-.date-check input {
-  display: flex;
-  min-width: 348px;
-  min-height: 38px;
-  border: none;
-  background-color: #F2F2F2;
-  margin: 0px 0px 29px 0px;
-}
-
-.date-check label {
-  margin: 0px 0px 29px 0px;
-}
-
-.amounts {
-  width: 458px ;
-  min-height: 38px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0px 55px 54px 55px;
-}
-.amounts input {
-  width: 114px;
-  height: 38px;
-  border: none;
-  background-color: #F2F2F2;
-  margin-top: 58px;
-}
-.amounts label {
-  margin-top: 58px;
 }
 
 /*Catalog*/
@@ -821,5 +751,114 @@ fill: var(--basic-black);
 }
 
 .bookingtext span:active {
+  opacity: 0.3;
+}
+
+/*Modal*/
+
+.modal {
+  display: flex;
+  width: 568px;
+  min-height: 395px;
+  box-shadow: 0px 7px 15px var(--shadow-modal);
+  background-color: var(--basic-white);
+  position: absolute;
+  left: 475px;
+  top: 2246px;
+}
+
+.date-check {
+  width: 458px;
+  height: 58px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 55px 55px 29px 55px;
+}
+
+.date-check input {
+  display: flex;
+  min-width: 348px;
+  min-height: 38px;
+  border: none;
+  background-color: var(--basic-form);
+  background-image: url(../img/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 320px 8px;
+  margin: 0px 0px 29px 0px;
+}
+.date-check input[type="text"] {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.date-check input:hover {
+  background-color: var(--basic-form);
+  background-image: url(../img/calendarblack.svg);
+}
+.date-check input:active {
+  background-color: var(--basic-form);
+  background-image: url(../img/calendarblue.svg);
+}
+
+.date-check label {
+  margin: 0px 0px 29px 0px;
+}
+
+.amounts {
+  width: 458px ;
+  min-height: 38px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 55px 54px 55px;
+}
+.amounts input {
+  width: 114px;
+  height: 38px;
+  border: none;
+  background-color: var(--basic-form);
+  margin-top: 58px;
+}
+
+.amounts label {
+  margin-top: 58px;
+}
+
+.date-check input:hover,
+.amounts input:hover {
+  background-color: var(--hover-form);
+}
+
+.date-check input:focus,
+.amount input:focus {
+  background-color: var(--focus-form);
+}
+
+
+.button-search {
+  min-width: 458px;
+  min-height: 58px;  
+  background-color: var(--basic-blue);
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--basic-white);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px 55px 55px 55px;
+  border: none;
+}
+
+.button-search:hover {
+  background-color: var(--hover-blue);
+}
+
+.button-search:active {
+  background-color: var(--active-blue);
+}
+.button-search span:active {
   opacity: 0.3;
 }
