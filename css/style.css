@@ -19,8 +19,6 @@
   --active-brown: #503e33;
 
   --active-logotip: #bdbbbc;
-  --basic-background: #888888;
-
   --basic-line: #E5E5E5;
   
   --basic-toggle: #ababab;
@@ -37,7 +35,6 @@
   --focus-form: #ffffff;
 
   --checkbox-disabled: #6a6a6a;
-
   --basic-scale: rgba(255, 255, 255, 0.3);
 }
 /* Global */
