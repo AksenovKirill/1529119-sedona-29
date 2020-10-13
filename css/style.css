@@ -1,5 +1,6 @@
 /*Variables*/
 :root {
+  --page-gray:  #888888;
   --basic-white: #ffffff;
   --basic-black: #000000;
   --basic-lightblack: #333333;
@@ -24,6 +25,7 @@
   --basic-line: #E5E5E5;
   
   --basic-toggle: #ababab;
+  --point-toggle: #1c4f80;
 
   --active-copyright: #231F20;
 
@@ -33,12 +35,14 @@
   --basic-form:  #F2F2F2;
   --hover-form: #EBEBEB;
   --focus-form: #ffffff;
+
+  --checkbox-disabled: #6a6a6a;
 }
 /* Global */
 
-
 body {
   width: 1200px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
@@ -61,6 +65,23 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.page {
+  background-color: var(--page-gray)
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Стили для ul */
@@ -106,7 +127,6 @@ img {
   align-items: center;
   min-height: 56px;
 }
-
 
 .style-nav1 {
   margin-left: 73px;
@@ -285,22 +305,6 @@ img {
   line-height: 24px;
 }
 
-.checkhotel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 568px;
-  height: 86px;
-  background-color: var(--basic-brown);
-  margin: 0 auto;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  font-size: 21px;
-  font-weight: bold;
-  border: none;
-  text-align: center;
-}
-
 .checkhotel:hover {
   background-color: var(--hover-brown);
 }
@@ -315,7 +319,7 @@ img {
 }
 
 .map {
-  height: 474px;
+  height: 475px;
   background-image: url("../img/map.png");
 }
 
@@ -331,7 +335,6 @@ img {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
 }
 
 .contact-list {
@@ -423,14 +426,15 @@ hr {
   width: 1200px;
   height: 217px;
   background-image: url("../img/catalog.jpg");
+  
 }
 
-.filter-item1,
-.filter-item2,
-.filter-item3 {
+.filter-item {
   border: none;
   padding: 0;
   margin: 0;
+  padding: 0px 0px 0px 0px;
+  margin: 27px 0px 0px 73px;
 }
 
 .filter legend {
@@ -438,99 +442,185 @@ hr {
   font-size: 16px;
   line-height: 21px;
   color: var(--basic-white);
+  padding: 0px 0px 24px 0px;
   }
-
-.filter-item1 legend,
-.filter-item2 legend,
-.filter-item3 legend {
-  margin-bottom: 24px;
-}
-
-.filter-item1 {
-  margin: 27px 0px 0px 73px;
-}
-
-.filter-item2 {
-  margin: 27px 46px 0px 119px;
-}
-
-.filter-item3 {
-  margin: 27px 73px 0px 301px;
-}
 
 .filter-ul {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  min-width: 138px;
-  height: 91px;
+  min-width: 136px;
+  height: 161px;
   color: var(--basic-white);
   line-height: 21px;
 }
 
 .filter-option {
-  padding-bottom: 25px; 
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 24px; 
+  width: 136px;
+  height: 23px;
 }
 
-.filter-item1 label {
-  padding-left: 17px;
+.filter-option label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding:  0px 0px 0px 42px;
 }
 
-.filter-item2 label {
-  padding-left: 18px;
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 2px solid var(--basic-white);
+  border-radius: 3px;
+  top: 0;
+  left: 0px;
 }
 
-.range-filter {
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 17px;
+  top: 2px;
+  left: 5px;
+  background-image: url(../img/arrow-filter.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+filter-input-checkbox + label,
+filter-input-checkbox:disabled + label {
+  color: var(--checkbox-disabled);
+}
+
+.filter-range {
   width: 317px;
-  height: 91px;
-  margin-top: 10px;
+  margin: 27px 0px 32px 400px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
 }
 
 .price-controls {
-  width: 317px;
+  position: relative;
   height: 36px;
-  display: flex;
-  color: var(--basic-white);
+  margin-bottom: 20px;
+  font-size: 0;
   border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  color: var(--basic-white);
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: var(--basic-white);
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
   border: none;
 }
 
 .range-controls {
- position: relative;
- width: 316px;
- height: 21px;
+  position: relative;
+  margin-bottom: 32px;
 }
 
 .range-controls .scale {
   height: 2px;
-  background: var(--basic-white);
-  margin-top: 20px;
-  margin-bottom: 33px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 80%;
   height: 2px;
-  background: var(--basic-gray);
-  opacity: 0.3;
+  background: var(--basic-white);
 }
 
-.range-controls .toggle {
+.range-toggle {
   position: absolute;
   top: -9px;
   width: 4px;
   height: 4px;
-  padding: 0;
+  background: var(--basic-toggle);
   border: 8px solid var(--basic-white);
-  background-color: var(--basic-toggle);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 var(--basic-toggle);
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
 }
 
-.range-controls .toggle-max {
-  left: 160px;
+.range-toggle:hover {
+  background: var(--point-toggle);
 }
 
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle-min:hover,
+.range-toggle-max:hover {
+  transform: scale(1.2);
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: var(--basic-black);
+  background: var(--basic-white);
+}
 /*Found*/
 
 .price-type {
@@ -562,7 +652,6 @@ hr {
   font-size: 12px;
   line-height: 18px;
   min-width: 49px;
- 
   background-color: var(--basic-white);
 }
 
@@ -621,7 +710,7 @@ hr {
 }
 
 .svgitem:hover {
-fill: var(--basic-black);
+  fill: var(--basic-black);
 }
 
 .svgitem:active {
@@ -756,39 +845,56 @@ fill: var(--basic-black);
 
 /*Modal*/
 
-.modal {
+.checkhotel {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 568px;
-  min-height: 395px;
+  height: 86px;
+  background-color: var(--basic-brown);
+  margin: 0 auto;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+}
+
+.modal-hotel {
+  width: 568px;
+  height: 395px; 
+  position: absolute;
+  left: 316px;
+  right: 316px;
+  top: 2245px;
+  margin: auto;
   box-shadow: 0px 7px 15px var(--shadow-modal);
   background-color: var(--basic-white);
-  position: absolute;
-  left: 475px;
-  top: 2246px;
 }
 
 .date-check {
-  width: 458px;
-  height: 58px;
+  width: 459px;
+  height: 109px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 55px 55px 29px 55px;
+  padding: 55px 55px 29px 55px;
 }
 
 .date-check input {
   display: flex;
   min-width: 348px;
-  min-height: 38px;
+  height: 38px;
   border: none;
   background-color: var(--basic-form);
-  background-image: url(../img/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: 320px 8px;
-  margin: 0px 0px 29px 0px;
+  margin:  0px 0px 29px 0px;
+  padding:  0px 0px 0px 12px;
+  
 }
+
 .date-check input[type="text"] {
   font-weight: bold;
   text-transform: uppercase;
@@ -796,11 +902,10 @@ fill: var(--basic-black);
 
 .date-check input:hover {
   background-color: var(--basic-form);
-  background-image: url(../img/calendarblack.svg);
 }
+
 .date-check input:active {
   background-color: var(--basic-form);
-  background-image: url(../img/calendarblue.svg);
 }
 
 .date-check label {
@@ -808,24 +913,23 @@ fill: var(--basic-black);
 }
 
 .amounts {
-  width: 458px ;
-  min-height: 38px;
+  width: 459px;
+  min-height: 36px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0px 55px 54px 55px;
 }
+
 .amounts input {
   width: 114px;
   height: 38px;
   border: none;
   background-color: var(--basic-form);
-  margin-top: 58px;
-}
-
-.amounts label {
-  margin-top: 58px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .date-check input:hover,
@@ -838,10 +942,9 @@ fill: var(--basic-black);
   background-color: var(--focus-form);
 }
 
-
 .button-search {
   min-width: 458px;
-  min-height: 58px;  
+  height: 58px;  
   background-color: var(--basic-blue);
   font-weight: bold;
   font-size: 21px;
@@ -852,6 +955,27 @@ fill: var(--basic-black);
   border: none;
 }
 
+.calendar {
+  position: absolute;
+  margin:  0px 0px 68px 420px;
+  border: none; 
+  background-color: inherit;
+}
+
+.calendar1 {
+  position: absolute;
+  margin:  0px 0px -65px 420px;
+  border: none; 
+  background-color: inherit;
+}
+.svg-calendar:hover {
+  fill: var(--basic-black);
+}
+
+.svg-calendar:active {
+  fill: var(--basic-blue);
+}
+
 .button-search:hover {
   background-color: var(--hover-blue);
 }
@@ -859,6 +983,40 @@ fill: var(--basic-black);
 .button-search:active {
   background-color: var(--active-blue);
 }
+
 .button-search span:active {
   opacity: 0.3;
+}
+
+.minus1,
+.plus1,
+.minus2,
+.plus2 {
+  position: absolute;
+  background-color: inherit;
+  border: none;
+}
+
+.minus1 {
+  margin:  0px 0px 7px 111px;
+}
+
+.plus1 {
+  margin:  0px 0px -2px 197px;
+}
+
+.minus2 {
+  margin:  0px 0px 7px 348px;
+}
+
+.plus2 {
+  margin:  0px 0px -2px 427px;
+}
+
+.svgplus:hover {
+  fill: var(--basic-black);
+}
+
+.svgplus:active {
+  fill: var(--basic-blue);
 }
