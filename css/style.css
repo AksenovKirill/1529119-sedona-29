@@ -1,6 +1,5 @@
 /*Variables*/
 :root {
-  --page-gray:  #888888;
   --basic-white: #ffffff;
   --basic-black: #000000;
   --basic-lightblack: #333333;
@@ -31,12 +30,15 @@
 
   --box-shadow: rgba(0, 1, 1, 0.2);
   --shadow-modal:  rgba(0, 1, 1, 0.15);
+  --shadow-toggle: rgba(0, 1, 1, 0.2);
 
   --basic-form:  #F2F2F2;
   --hover-form: #EBEBEB;
   --focus-form: #ffffff;
 
   --checkbox-disabled: #6a6a6a;
+
+  --basic-scale: rgba(255, 255, 255, 0.3);
 }
 /* Global */
 
@@ -68,7 +70,7 @@ img {
 }
 
 .page {
-  background-color: var(--page-gray)
+  background-color: var(--basic-gray);
 }
 
 .visually-hidden {
@@ -159,6 +161,7 @@ img {
 .site-navigation .active {
   color: var(--basic-brown);
 }
+
 .nav-link:hover {
   color: var(--basic-blue);
 }
@@ -254,9 +257,11 @@ img {
   justify-content: space-around;
   align-items: center;
 }
+
 .features-item2 {
   padding-top: 60px;
 }
+
 .features-block2 {
   font-weight: bold;
   font-size: 21px;
@@ -301,6 +306,7 @@ img {
   font-size: 30px;
   line-height: 24px;
 }
+
 .div-interest p {
   line-height: 24px;
 }
@@ -308,12 +314,15 @@ img {
 .checkhotel:hover {
   background-color: var(--hover-brown);
 }
+
 .checkhotel:active {
   background-color: var(--active-brown);
 }
+
 .checkhotel span:hover {
   background-color: var(--hover-brown);
 }
+
 .checkhotel span:active {
  opacity: 0.3;
 }
@@ -324,6 +333,7 @@ img {
 }
 
 /*Footer*/
+
 .main-footer {
   width: 1200px;
   height: 120px;
@@ -341,12 +351,15 @@ img {
   margin-top: 23px;
   margin-bottom: 36px;
 }
+
 .button-visit {
   margin-left: 153px;
 }
+
 .telephone {
   margin-left: 111px;
 }
+
 .social-list {
   display: flex;
   flex-direction: row;
@@ -377,9 +390,11 @@ img {
   justify-content: flex-end;
   align-items: center;
 }
+
 .p-copy {
   margin-right: 8px;
 }
+
 /* Стили footer */
 
 .style-social:hover {
@@ -425,8 +440,7 @@ hr {
   flex-wrap: nowrap;
   width: 1200px;
   height: 217px;
-  background-image: url("../img/catalog.jpg");
-  
+  background-image: url("../img/catalog.jpg"); 
 }
 
 .filter-item {
@@ -494,8 +508,8 @@ hr {
   background-position: 0 0;
 }
 
-filter-input-checkbox + label,
-filter-input-checkbox:disabled + label {
+
+.filter-input-checkbox:disabled {
   color: var(--checkbox-disabled);
 }
 
@@ -565,7 +579,7 @@ filter-input-checkbox:disabled + label {
 
 .range-controls .scale {
   height: 2px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--basic-scale);
 }
 
 .range-controls .bar {
@@ -582,7 +596,7 @@ filter-input-checkbox:disabled + label {
   background: var(--basic-toggle);
   border: 8px solid var(--basic-white);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  box-shadow: 0 2px 1px 0 var(--shadow-toggle);
   cursor: pointer;
 }
 
@@ -609,7 +623,7 @@ filter-input-checkbox:disabled + label {
   padding: 6px 35px;
   font-size: 14px;
   line-height: 20px;
-  color: #ffffff;
+  color: var(--basic-white);
   text-transform: uppercase;
   background: transparent;
   border: 2px solid var(--basic-white);
@@ -621,6 +635,7 @@ filter-input-checkbox:disabled + label {
   color: var(--basic-black);
   background: var(--basic-white);
 }
+
 /*Found*/
 
 .price-type {
@@ -892,7 +907,6 @@ filter-input-checkbox:disabled + label {
   background-color: var(--basic-form);
   margin:  0px 0px 29px 0px;
   padding:  0px 0px 0px 12px;
-  
 }
 
 .date-check input[type="text"] {
