@@ -325,10 +325,9 @@ img {
 }
 
 .map {
-  height: 475px;
-  background-image: url("../img/map.png");
+  width: 1200px;
+  height: 594px;
 }
-
 /*Footer*/
 
 .main-footer {
@@ -883,9 +882,10 @@ hr {
   margin: auto;
   box-shadow: 0px 7px 15px var(--shadow-modal);
   background-color: var(--basic-white);
+  display: none;
 }
 
-.date-check {
+.date-check { 
   width: 459px;
   height: 109px;
   font-weight: bold;
@@ -898,12 +898,30 @@ hr {
 
 .date-check input {
   display: flex;
-  min-width: 348px;
+  width: 346px;
   height: 38px;
   border: none;
   background-color: var(--basic-form);
-  margin:  0px 0px 29px 0px;
+  margin:  0px 0px 29px 9px;
   padding:  0px 0px 0px 12px;
+}
+input::placeholder {
+  color: var(--basic-black);
+}
+:focus::-webkit-input-placeholder {
+  color: transparent
+}
+
+:focus::-moz-placeholder {
+  color: transparent
+}
+
+:focus:-moz-placeholder {
+  color: transparent
+}
+
+:focus:-ms-input-placeholder {
+  color: transparent
 }
 
 .date-check input[type="text"] {
@@ -920,7 +938,7 @@ hr {
 }
 
 .date-check label {
-  margin: 0px 0px 29px 0px;
+  margin:  0px 0px 29px 0px;
 }
 
 .amounts {
@@ -929,8 +947,9 @@ hr {
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0px 55px 54px 55px;
+  position: relative;
 }
 
 .amounts input {
@@ -942,6 +961,22 @@ hr {
   text-transform: uppercase;
   font-weight: bold;
 }
+.amounts input:last-of-type {
+  margin:  0px 0px 0px 25px; 
+}
+
+.amounts label {
+  width: 101px;
+  height: 26px;
+  
+}
+.amounts label:last-of-type {
+  width: 68px;
+  height: 26px;
+  margin:  0px 0px 0px 35px;
+  
+}
+
 
 .date-check input:hover,
 .amounts input:hover {
@@ -1003,25 +1038,22 @@ hr {
 .plus1,
 .minus2,
 .plus2 {
-  position: absolute;
   background-color: inherit;
   border: none;
+  position: absolute;
+  display: flex;
 }
-
 .minus1 {
-  margin:  0px 0px 7px 111px;
+  left: 105px;
 }
-
 .plus1 {
-  margin:  0px 0px -2px 197px;
+  left: 186px;
 }
-
 .minus2 {
-  margin:  0px 0px 7px 348px;
+  left: 350px;
 }
-
 .plus2 {
-  margin:  0px 0px -2px 427px;
+  left: 426px;
 }
 
 .svgplus:hover {
@@ -1030,4 +1062,45 @@ hr {
 
 .svgplus:active {
   fill: var(--basic-blue);
+}
+
+.modal-show {
+  display: block;
+  animation:  down 1.2s;
+}
+
+.modal-error {
+  animation: shake 0.9s;
+}
+
+/* Animation*/
+@keyframes down {
+  from {
+    transform: translateY(-400px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-15px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(15px);
+  }
 }
