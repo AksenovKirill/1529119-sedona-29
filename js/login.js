@@ -9,7 +9,8 @@ const loginChild = loginPopup.querySelector(".sum-c");
 const loginSearch = loginPopup.querySelector(".button-search");
 
 loginLink.addEventListener("click", function () {
-    loginPopup.classList.add("modal-show");
+    loginPopup.classList.toggle("modal-show");
+
 });
 
   loginSearch.addEventListener("submit", function (evt) {

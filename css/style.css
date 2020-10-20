@@ -192,20 +192,25 @@ img {
 }
 
 /*Reason*/
-
-.reason {
-  text-align: center;
+.reason-grid {
+  display: grid;
   height: 216px;
-  background-color: var(--basic-white);
+  width: 1200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: stretch;
+  justify-items: center;
 }
 
 .reason-h2 {
-  padding: 43px 365px 16px;
+  margin:  43px 0px 0px 0px;
+  text-align: center;
 }
 
 .reason-p {
+  text-align: center;
   color: var(--basic-lightblack);
-  padding: 0px 340px 51px;
+  margin:  19px 0px 0px 0px;
 }
 
 /*Features*/
@@ -287,41 +292,27 @@ img {
 /*Interest*/
 
 .div-interest {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: 1200px;
+  display: grid;
   height: 205px;
+  width: 1200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: stretch;
+  justify-items: center;
   color: var(--basic-lightblack);
-  text-align: center;
-  margin: 58px 0px 0px 0px;
 }
 
 .div-interest h2 {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
+  margin:  58px 0px 0px 0px;
+  
 }
 
 .div-interest p {
   line-height: 24px;
-}
-
-.checkhotel:hover {
-  background-color: var(--hover-brown);
-}
-
-.checkhotel:active {
-  background-color: var(--active-brown);
-}
-
-.checkhotel span:hover {
-  background-color: var(--hover-brown);
-}
-
-.checkhotel span:active {
- opacity: 0.3;
+  text-align: center;
 }
 
 .map {
@@ -872,13 +863,29 @@ hr {
   text-align: center;
 }
 
+.checkhotel:hover {
+  background-color: var(--hover-brown);
+}
+
+.checkhotel:active {
+  background-color: var(--active-brown);
+}
+
+.checkhotel span:hover {
+  background-color: var(--hover-brown);
+}
+
+.checkhotel span:active {
+ opacity: 0.3;
+}
+
 .modal-hotel {
   width: 568px;
   height: 395px; 
   position: absolute;
   left: 316px;
   right: 316px;
-  top: 2245px;
+  top: 2171px;
   margin: auto;
   box-shadow: 0px 7px 15px var(--shadow-modal);
   background-color: var(--basic-white);
@@ -905,23 +912,24 @@ hr {
   margin:  0px 0px 29px 9px;
   padding:  0px 0px 0px 12px;
 }
+
 input::placeholder {
   color: var(--basic-black);
 }
 :focus::-webkit-input-placeholder {
-  color: transparent
+  color: transparent;
 }
 
 :focus::-moz-placeholder {
-  color: transparent
+  color: transparent;
 }
 
 :focus:-moz-placeholder {
-  color: transparent
+  color: transparent;
 }
 
 :focus:-ms-input-placeholder {
-  color: transparent
+  color: transparent;
 }
 
 .date-check input[type="text"] {
@@ -968,13 +976,12 @@ input::placeholder {
 .amounts label {
   width: 101px;
   height: 26px;
-  
 }
+
 .amounts label:last-of-type {
   width: 68px;
   height: 26px;
   margin:  0px 0px 0px 35px;
-  
 }
 
 
@@ -1074,6 +1081,7 @@ input::placeholder {
 }
 
 /* Animation*/
+
 @keyframes down {
   from {
     transform: translateY(-400px);
