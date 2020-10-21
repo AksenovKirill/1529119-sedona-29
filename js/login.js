@@ -1,12 +1,13 @@
-const loginLink = document.querySelector(".checkhotel");
-const loginPopup = document.querySelector(".modal-hotel");
-const loginClose = document.querySelector(".checkhotel-close");
-const loginForm = loginPopup.querySelector(".login-form");
-const loginDateMove = loginPopup.querySelector(".date-move");
-const loginDateOut = loginPopup.querySelector(".date-out");
-const loginAdults = loginPopup.querySelector(".sum-a");
-const loginChild = loginPopup.querySelector(".sum-c");
-const loginSearch = loginPopup.querySelector(".button-search");
+
+const loginLink=document.querySelector(".checkhotel");
+const loginPopup=document.querySelector(".modal-hotel");
+const loginClose=document.querySelector(".checkhotel-close");
+const loginForm=loginPopup.querySelector(".login-form");
+const loginDateMove=loginPopup.querySelector(".date-move");
+const loginDateOut=loginPopup.querySelector(".date-out");
+const loginAdults=loginPopup.querySelector(".sum-a");
+const loginChild=loginPopup.querySelector(".sum-c");
+const loginSearch=loginPopup.querySelector(".button-search");
 
 loginLink.addEventListener("click", function () {
     loginPopup.classList.toggle("modal-show");
